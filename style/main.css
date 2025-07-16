@@ -1,0 +1,316 @@
+ @font-face {
+  font-family: 'Noto Sans';
+  src: url('../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../assets/fonts/NotoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Sans Static';
+  src: url('../assets/fonts/static/NotoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Static';
+  src: url('../assets/fonts/static/NotoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Static';
+  src: url('../assets/fonts/static/NotoSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+ 
+
+/* ===============(VARIABLES) */
+:root{
+    --headerDark-color:hsl(225, 23%, 24%);
+    --bodyDark-color:linear-gradient(180deg, #040918 0%, #091540 100%);
+ 
+}
+/* ===============//(VARIABLES)// */
+
+/* ===============(GLOBAL RULES) */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background: var(--bodyDark-color);
+    min-height: 100vh;
+    
+   
+}
+ body.whiteTheme{
+    background : hsl(217, 61%, 90%) ;
+}  
+
+ul{
+    list-style: none;
+}
+.container{
+    padding-left:15px;
+    padding-right:15px;
+    margin: auto;
+}
+@media(max-width:600px){
+    .container{
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+}
+
+/* Small */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+/* ===============//(GLOBAL RULES)//*/
+
+ 
+
+
+/* ================================(HEADER) */
+
+.header .container{
+    background-color:var(--headerDark-color) ;
+    margin-top: 25px ;
+    margin-bottom: 25px ;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container.whiteTheme{
+    background-color: hsl(0, 0%, 93%);
+}
+.header .container .themeIcon{
+    background-color: hsl(226, 11%, 37%);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.header .container .themeIcon:hover{
+     background-color: hsl(227, 11%, 48%);
+ 
+}
+.header .container .themeIcon.whiteTheme{
+     background-color: hsl(0, 0%, 78%);
+ 
+}
+
+/* ================================/(HEADER)// */
+ 
+
+/* ===================================(MAINCONTENT) */
+
+.mainContent .container{
+    margin-bottom: 50px;
+}
+
+
+/* head */
+.mainContent .container .head-content{
+    margin: 40px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+.mainContent .container .head-content h2.whiteTheme{
+    color: #091540;
+     
+}
+.mainContent .container .head-content .filterWraper button {
+    color: white;
+    background-color: hsl(226, 25%, 17%);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.mainContent .container .head-content .filterWraper button.whiteTheme{
+     background-color: hsl(0, 0%, 93%);
+      color:#091540;
+}
+.mainContent .container .head-content .filterWraper button:not(.clicked):hover {
+       background-color: hsl(226, 24%, 25%);
+       
+    
+}
+.mainContent .container .head-content .filterWraper button.whiteTheme:not(.clicked):hover {
+       background-color: hsl(0, 16%, 89%);
+      
+       
+    
+}
+.mainContent .container .head-content .filterWraper button.clicked{
+    background-color: hsl(3, 86%, 64%);
+}
+.mainContent .container .head-content .filterWraper button.clicked:hover{
+    background-color: hsl(3, 71%, 56%);
+}
+@media(max-width:550px){
+    .mainContent .container .head-content{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* //head// */
+
+
+.mainContent .container .extensionsCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.mainContent .container .extensionsCards .card {
+
+   background-color: hsl(226, 25%, 17%);
+   padding: 15px;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+    
+}
+.mainContent .container .extensionsCards .card.whiteTheme {
+
+   background-color :hsl(0, 0%, 93%);
+   
+    
+}
+.mainContent .container .extensionsCards .card .extensionCardDetails{
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    color: white;
+     
+}
+.mainContent .container .extensionsCards .card .extensionCardDetails.whiteTheme{
+   color:#091540;
+     
+}
+.mainContent .container .extensionsCards .card .extensionCardDetails .card-info p{
+
+    margin-top: 10px;
+    font-weight: 200;
+}
+
+.mainContent .container .extensionsCards .card .extensionCardDetails  img{
+    align-self: start;
+}
+.mainContent .container .extensionsCards .card .card-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainContent .container .extensionsCards .card .card-action button{
+    background-color: hsl(225, 23%, 24%);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    
+}
+.mainContent .container .extensionsCards .card .card-action button.whiteTheme{
+    background-color: hsl(200, 60%, 99%);
+    color:#091540;
+     
+    
+}
+.mainContent .container .extensionsCards .card .card-action button:hover{
+    color: hsl(225, 23%, 24%);
+    background-color: hsl(3, 71%, 56%);
+
+}
+.mainContent .container .extensionsCards .card .card-action button.whiteTheme:hover{
+      background-color: hsl(240, 1%, 79%);
+
+}
+
+.mainContent .container .extensionsCards .card .card-action .extensionStatus{
+    height: 20px;
+    width: 40px;
+    background-color: orangered;
+    background-color: hsl(0, 0%, 78%);
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+} 
+.mainContent .container .extensionsCards .card .card-action .extensionStatus span {
+    position: absolute;
+    display: block;
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    top: 50%;
+    left: 5px; /* match the padding */
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.mainContent .container .extensionsCards .card .card-action .extensionStatus.extensionStatusClicked {
+     background-color: orangered;
+}
+
+.mainContent .container .extensionsCards .card .card-action .extensionStatus.extensionStatusClicked span {
+    transform: translate(16px, -50%);  
+}
+
+ 
+@media(max-width:550px){
+    .mainContent .container .extensionsCards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================//(MAINCONTENT)// */

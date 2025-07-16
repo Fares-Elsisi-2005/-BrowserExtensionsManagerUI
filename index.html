@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+     <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="./style/normalize.css">
+    <!-- Font Awesome Library -->
+     <link rel="stylesheet" href="./style/all.min.css">
+    <!-- Main Template css file -->
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body class="" >
+  <!-- ================================(HEADER) -->
+  <header class="header">
+    <div class="container " id="headerContainer">
+        <img class="logo" src="./assets/images/logo.svg" alt="logo">
+        <img class="themeIcon   " id="sunIconBtn" src="./assets/images/icon-sun.svg"  alt="">
+        <img class="themeIcon whiteTheme hide " id="moonIconBtn" src="./assets/images/icon-moon.svg"  alt="">
+    </div>
+  </header>
+  <!-- ================================//(HEADER)// -->
+
+  <!-- =====================================(MAIN-CONTENT) -->
+   <section class="mainContent">
+    <div class="container">
+      <div class="head-content">
+        <h2 class="" id="headTitle">Extensions List</h2>
+        <div class="filterWraper">
+          <button class="clicked " id="allBtn">All</button>
+          <button class="" id="activeBtn">Active</button>
+          <button class="" id="inactiveBtn">Inactive</button>
+        </div>
+      </div>
+
+      <div class="extensionsCards" id="extensionsCardsContainer">
+        
+        <div class="card" data-CardId="2">
+          <div class="extensionCardDetails">
+            <img src="./assets/images/logo-devlens.svg" alt="devlens" class="extensionImage">
+            <div class="card-info">
+              <h3 class="extentionTitle">Devlens</h3>
+              <p class="extentionDescription">Quickly inspect page layouts and visualize element boundaries</p>
+            </div>
+          </div>
+          <div class="card-action">
+            <button class="removeExtensionBtn" id="removeExtensionBtn" >Remove</button>
+            <div class="extensionStatus extensionStatusClicked" id="extensionStatusBtn"><span></span></div>
+          </div>
+        </div>
+        
+        <div class="card" >
+          <div class="extensionCardDetails">
+            <img src="./assets/images/logo-devlens.svg" alt="devlens" class="extensionImage">
+            <div class="card-info">
+              <h3 class="extentionTitle">Devlens</h3>
+              <p class="extentionDescription">Quickly inspect page layouts and visualize element boundaries</p>
+            </div>
+          </div>
+          <div class="card-action">
+            <button class="removeExtensionBtn">Remove</button>
+            <div class="extensionStatus"><span></span></div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="extensionCardDetails">
+            <img src="./assets/images/logo-devlens.svg" alt="devlens" class="extensionImage">
+            <div class="card-info">
+              <h3 class="extentionTitle">Devlens</h3>
+              <p class="extentionDescription">Quickly inspect page layouts and visualize element boundaries</p>
+            </div>
+          </div>
+          <div class="card-action">
+            <button class="removeExtensionBtn">Remove</button>
+            <div class="extensionStatus"><span></span></div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="extensionCardDetails">
+            <img src="./assets/images/logo-devlens.svg" alt="devlens" class="extensionImage">
+            <div class="card-info">
+              <h3 class="extentionTitle">Devlens</h3>
+              <p class="extentionDescription">Quickly inspect page layouts and visualize element boundaries</p>
+            </div>
+          </div>
+          <div class="card-action">
+            <button class="removeExtensionBtn">Remove</button>
+            <div class="extensionStatus"><span></span></div>
+          </div>
+        </div>
+
+         
+      </div>
+    </div>
+   </section>
+  <!-- =====================================//(MAIN-CONTENT)// -->
+
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
