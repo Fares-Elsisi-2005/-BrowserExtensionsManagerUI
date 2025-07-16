@@ -19,7 +19,7 @@ let currenttheme = "dark";
 
 async function loadData() {
   try {
-    const response = await fetch('../data.json');
+    const response = await fetch('.././data.json');
     const data = await response.json();
       extensionData = data.map((extension, index) => {
           return { ...extension, id: index };
